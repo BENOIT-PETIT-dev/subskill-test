@@ -1,0 +1,323 @@
+@use '../abstracts' as *;
+
+main {
+  overflow: hidden;
+
+  .featured-article {
+    margin-top: 3.125rem;
+  }
+
+  .more-articles {
+    margin-top: 4.375rem;
+
+    .more-articles__flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3.5rem;
+
+      > * {
+        flex: 1 1 20rem;
+      }
+    }
+  }
+
+  .presidents {
+    position: relative;
+    margin-top: 9.375rem;
+    color: #ffffff;
+    background-color: var(--color-layout-orange);
+
+    @include mq(small) {
+      margin-top: 5.5rem;
+    }
+
+    .container {
+      padding-top: 4.375rem;
+      padding-bottom: 3.125rem;
+      position: relative;
+
+      > * {
+        z-index: 2;
+      }
+
+      &::after {
+        --height: 18rem;
+        content: '';
+        position: absolute;
+        z-index: 1;
+        bottom: calc(var(--height) / -1.6744186);
+        right: -3.625rem;
+        background: url('../assets/img/ui-circle-modif.svg') no-repeat center
+          center;
+        background-size: contain;
+        width: calc(var(--height) / 1.00694444);
+        height: var(--height);
+        pointer-events: none;
+
+        @include mq(medium) {
+          --height: 14rem;
+          right: 5vw;
+        }
+
+        @include mq(small) {
+          --height: 10rem;
+        }
+      }
+    }
+
+    &__grid {
+      margin-top: 3.125rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8125rem;
+
+      @include mq(small) {
+        margin-top: 2.5rem;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mq(xsmall) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__discover {
+      margin-top: 4.375rem;
+    }
+  }
+
+  .juridique-articles {
+    padding: 9.375rem 0;
+    background-color: var(--color-layout-gray);
+
+    @include mq(small) {
+      padding: 5.5rem 0;
+    }
+
+    &__grid {
+      margin-top: 3.125rem;
+      display: grid;
+      row-gap: 7.5rem;
+
+      .juridique-article:nth-child(2n) {
+        .juridique-article__text {
+          order: -1;
+        }
+      }
+
+      @include mq(small) {
+        row-gap: 5rem;
+
+        .juridique-article:nth-child(2n) {
+          .juridique-article__text {
+            order: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  .club {
+    position: relative;
+    background-color: var(--color-layout-gray);
+
+    .club-top {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+
+      @include mq(xsmall) {
+        flex-direction: column;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: -3.5rem;
+        bottom: 3.5rem;
+        background: url('../assets/img/ui-circle-modif-green.svg') no-repeat
+          center center;
+        background-size: 100%;
+        width: 13.5rem;
+        height: 13.65rem;
+
+        @include mq(small) {
+          display: none;
+        }
+      }
+    }
+
+    &__title {
+      position: relative;
+      z-index: 2;
+      flex: 1 1 0;
+      min-width: 18rem;
+
+      @include mq(xsmall) {
+        min-width: 0;
+      }
+    }
+
+    &__sticker {
+      position: relative;
+      z-index: 2;
+      flex: 2 1 0;
+      max-width: 40rem;
+      min-width: 26rem;
+      padding: 3.125rem 3.625rem;
+      background-color: var(--color-layout-green);
+
+      @include mq(xsmall) {
+        min-width: 0;
+        padding: 3.125rem 2.275rem;
+      }
+
+      &__paragraph {
+        letter-spacing: 1px;
+      }
+
+      &__link {
+        margin-top: 1.875rem;
+      }
+    }
+
+    .club-bottom {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      height: 11.625rem;
+      width: 100%;
+      background-color: #ffffff;
+    }
+  }
+
+  .partners {
+    margin-top: 9.375rem;
+
+    @include mq(small) {
+      margin-top: 5rem;
+    }
+
+    &__grid {
+      margin-top: 3.125rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 1.875rem;
+
+      @include mq(xsmall) {
+        gap: 1.375rem;
+      }
+    }
+
+    &__link {
+      margin-top: 4.375rem;
+    }
+  }
+
+  .club-videos {
+    margin-top: 9.375rem;
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    background-color: var(--color-layout-gray);
+
+    @include mq(large) {
+      padding-bottom: 10rem;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .swiper-container {
+      margin-top: 3.125rem;
+      margin-left: -0.9375rem;
+      width: calc(100% + 1.875rem);
+      overflow: hidden;
+
+      .swiper-wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+
+        .swiper-slide {
+          width: calc(1/3 * 100%);
+          min-width: 20rem;
+          padding: 0 0.9375rem;
+          flex-shrink: 0;
+          cursor: grab;
+
+          @include mq(xsmall) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &__prev,
+    &__next {
+      position: absolute;
+      top: 50%;
+      width: 3.75rem;
+      height: 3.75rem;
+      padding: 0;
+      background-color: var(--color-layout-orange);
+      background-image: url('../assets/img/ui-arrow-black.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 1.625rem;
+
+      @include mq(large) {
+        top: calc(100% + 3.75rem);
+      }
+    }
+
+    &__prev {
+      left: calc(-3.75rem - 1rem);
+      transform: translateY(-50%) rotate(180deg);
+
+      @include mq(large) {
+        left: 50%;
+        transform: translateX(calc(-100% - 0.5rem)) translateY(-1rem) rotate(180deg);
+      }
+    }
+
+    &__next {
+      right: calc(-3.75rem - 1rem);
+      transform: translateY(-50%) rotate(0deg);
+
+      @include mq(large) {
+        right: 50%;
+        transform: translateX(calc(100% + 0.5rem)) translateY(-1rem) rotate(0deg);
+      }
+    }
+  }
+
+  .contact {
+    margin-top: 9.375rem;
+    padding-bottom: 6.25rem;
+
+    @include mq(small) {
+      margin-top: 5.5rem;
+    }
+
+    &__advice {
+      margin-top: 1.875rem;
+    }
+
+    &__warning {
+      margin-top: 0.875rem;
+      font-weight: bold;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+
+    &__form {
+      width: 100%;
+      margin-top: 1.875rem;
+    }
+  }
+}

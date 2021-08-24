@@ -1,0 +1,52 @@
+@use '../abstracts' as *;
+
+.cta-container {
+  width: 100%;
+  
+  $alignments: left, center, right;
+  @each $value in $alignments {
+    &.cta-container--#{$value} {
+      text-align: #{$value};
+    }
+  }
+}
+
+.cta {
+  position: relative;
+  display: inline-block;
+  padding: 1.25rem 0.9375rem;
+  padding-right: 2.9375rem;
+  color: var(--color-font-lightblack);
+  font-family: 'Seshat', sans-serif;
+  font-weight: 400;
+  font-size: var(--font-20);
+  transition: padding-right .15s var(--cubic-ease-in-out);
+
+  &:hover {
+    padding-right: 3.25rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0.9375rem;
+    background: url("../assets/img/ui-arrow-black.svg") no-repeat center center;
+    background-size: 100%;
+    width: 1.0625rem;
+    height: 0.6875rem;
+    transform: translateY(-50%);
+  }
+
+  &.cta--white {
+    background-color: #FFFFFF;
+  }
+
+  &.cta--orange {
+    background-color: var(--color-layout-orange);
+  }
+
+  &.cta--beige {
+    background-color: transparentize(map-get($colors, layout, orange), 0.78%);
+  }
+}

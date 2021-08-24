@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+:root {
+  @each $type, $color in $colors {
+    @each $prop, $value in $color {
+      --color-#{$type}-#{"" + $prop}: #{$value};
+    }
+  }
+
+  @each $px-size, $rem-value in $type-scale {
+    --font-#{$px-size}: #{$rem-value};
+  }
+
+  @each $timing, $value in $cubics {
+    --cubic-#{$timing}: #{$value};
+  }
+}

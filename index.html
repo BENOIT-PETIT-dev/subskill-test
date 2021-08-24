@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js" integrity="sha512-BABFxitBmYt44N6n1NIJkGOsNaVaCs/GpaJwDktrfkWIBFnMD6p5l9m+Kc/4SLJSJ4mYf+cstX98NYrsG/M9ag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Subskill test</title>
+</head>
+
+<body>
+    <nav class="primary-nav">
+        <a href="" class="logo-wrapper">
+            <img src="./src/assets/img/logo.svg" alt="Logo Les avocats de France">
+        </a>
+        <ul role="list" class="menu">
+            <li><a href="">Toute l'actu</a></li>
+            <span class="dots"></span>
+            <li><a href="">Le club</a></li>
+            <span class="dots"></span>
+            <li><a href="">Publication</a></li>
+            <span class="dots"></span>
+            <li><a href="">Nos partenaires</a></li>
+            <span class="dots"></span>
+            <li><a href="">Évènements</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="featured-article container">
+            <article class="article article--featured">
+                <div class="article__top">
+                    <picture class="article__top__cover">
+                        <img src="./src/assets/img/featured-article.jpg"
+                            alt="Trois scientifiques en combinaisons sur un site">
+                    </picture>
+                </div>
+                <div class="article__bottom width-limiter width-limiter--small">
+                    <div class="article__bottom__tag tag">
+                        <span>L'actualité au prisme du droit</span>
+                    </div>
+                    <span class="article__bottom__date">10 août 2021</span>
+                    <h3 class="article__bottom__title">
+                        L’Union européenne se lance dans la course au standard des obligations vertes, par Sylvie
+                        Schmitt
+                    </h3>
+                    <p class="article__bottom__description">
+                        Le 6 juillet 2021, la Commission européenne a rendu publique sa stratégie
+                        de promotion de la finance durable. Deux projets de textes ont été présentés
+                        à cette occasion. Le premier…
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="more-articles container">
+            <div class="more-articles__flex">
+                <article class="article">
+                    <div class="article__top">
+                        <picture class="article__top__cover">
+                            <img src="./src/assets/img/more-article-1.jpg" alt="Bâtiment du Conseil constitutionnel">
+                        </picture>
+                    </div>
+                    <div class="article__bottom width-limiter width-limiter--small">
+                        <div class="article__bottom__tag tag">
+                            <span>L'actualité au prisme du droit</span>
+                        </div>
+                        <span class="article__bottom__date">10 août 2021</span>
+                        <h3 class="article__bottom__title">
+                            L’Union européenne se lance dans la course au standard des obligations vertes, par Sylvie
+                            Schmitt
+                        </h3>
+                        <p class="article__bottom__description">
+                            Le vote de la loi sous la Ve République est un exercice juridique convenu dont les acteurs
+                            sont identifiés et la conclusion souvent connue à l’avance.
+                        </p>
+                    </div>
+                </article>
+                <article class="article">
+                    <div class="article__top">
+                        <picture class="article__top__cover">
+                            <img src="./src/assets/img/more-article-2.jpg" alt="Bâtiment du Conseil constitutionnel">
+                        </picture>
+                    </div>
+                    <div class="article__bottom width-limiter width-limiter--small">
+                        <div class="article__bottom__tag tag">
+                            <span>L'actualité au prisme du droit</span>
+                        </div>
+                        <span class="article__bottom__date">10 août 2021</span>
+                        <h3 class="article__bottom__title">
+                            Le Tribunal constitutionnel espagnol censure l’état d’alarme : Vice juridique ou erreur
+                            politique ?
+                        </h3>
+                        <p class="article__bottom__description">
+                            L’information a filtré et elle a fait l’effet d’une bombe : le 14 juillet dernier,
+                            l’assemblée plénière du Tribunal constitutionnel espagnol a partiellement fait droit au
+                            recours d’inconstitutionnalité formé par le parti politique
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="presidents">
+            <div class="container">
+                <h2 class="presidents__title">Nos présidents d'honneur</h2>
+                <div class="presidents__grid">
+                    <article class="president">
+                        <figure class="president__profile">
+                            <picture class="president__profile__photo">
+                                <img src="./src/assets/img/president-1.jpg" alt="Elisabeth Baraduc">
+                            </picture>
+                            <figcaption>
+                                <h3>Elisabeth Baraduc</h3>
+                                <p>Avocat au Conseil d’Etat et à la Cour de cassation - Baraduc&Duhamel</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="president">
+                        <figure class="president__profile">
+                            <picture class="president__profile__photo">
+                                <img src="./src/assets/img/president-2.jpg" alt="Christine Lagarde">
+                            </picture>
+                            <figcaption>
+                                <h3>Christine Lagarde</h3>
+                                <p>Présidente de la Banque centrale européenne (BCE)</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="president">
+                        <figure class="president__profile">
+                            <picture class="president__profile__photo">
+                                <img src="./src/assets/img/president-3.jpg" alt="Alexandre de Juniac">
+                            </picture>
+                            <figcaption>
+                                <h3>Alexandre de Juniac</h3>
+                                <p>Directeur Général de l’Association Internationale du Transport Aérien</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
+                <div class="presidents__discover cta-container cta-container--center">
+                    <a class="cta cta--white" href="">Découvrir les membres du club</a>
+                </div>
+            </div>
+        </section>
+        <section class="juridique-articles">
+            <div class="container">
+                <h2 class="juridique-articles__title">La semaine juridique</h2>
+                <div class="juridique-articles__grid">
+                    <article class="juridique-article">
+                        <picture class="juridique-article__thumbnail video-thumbnail">
+                            <div class="juridique-article__thumbnail__icon video-thumbnail__icon">
+                                <img class="juridique-article__thumbnail__icon__play video-thumbnail__icon__play"
+                                    src="./src/assets/img/video-icon-play.svg">
+                                <img class="juridique-article__thumbnail__icon__circle video-thumbnail__icon__circle"
+                                    src="./src/assets/img/video-icon-circle.svg">
+                            </div>
+                            <img class="juridique-article__thumbnail__image video-thumbnail__image"
+                                src="./src/assets/img/juridique-article-1.jpg" alt="Gaëlle Filhol 
+                            et Alexandre Reynaud">
+                        </picture>
+                        <div class="juridique-article__text">
+                            <span class="juridique-article__text__date">10 août 2021</span>
+                            <h3 class="juridique-article__text__title">Sanctions internationales, par Gaëlle Filhol et
+                                Alexandre Reynaud</h3>
+                            <p class="juridique-article__text__description">Le recours aux sanctions internationales –
+                                comme celles adoptées en 2021 par les Etats-Unis contre des entreprises chinoises
+                                spécialisées dans la défense et les technologies de surveillance1 – ne cesse de croître
+                                et, dès lors, d’occuper l’actualité de l’arbitrage international.</p>
+                            <a class="juridique-article__text__link cta cta--orange" href="">Découvrir l'article</a>
+                        </div>
+                    </article>
+                    <article class="juridique-article">
+                        <picture class="juridique-article__thumbnail video-thumbnail">
+                            <div class="juridique-article__thumbnail__icon video-thumbnail__icon">
+                                <img class="juridique-article__thumbnail__icon__play video-thumbnail__icon__play"
+                                    src="./src/assets/img/video-icon-play.svg">
+                                <img class="juridique-article__thumbnail__icon__circle video-thumbnail__icon__circle"
+                                    src="./src/assets/img/video-icon-circle.svg">
+                            </div>
+                            <img class="juridique-article__thumbnail__image video-thumbnail__image"
+                                src="./src/assets/img/juridique-article-2.jpg" alt="Gaëlle Filhol 
+                            et Alexandre Reynaud">
+                        </picture>
+                        <div class="juridique-article__text">
+                            <span class="juridique-article__text__date">10 août 2021</span>
+                            <h3 class="juridique-article__text__title">Hybridation, par Dan Benguigui</h3>
+                            <p class="juridique-article__text__description">Un phénomène étrange, que l’on serait tenté
+                                de qualifier d’hybridation du contentieux des affaires, semble imprégner à bas bruit le
+                                paysage juridique français. De mêmes faits, s’inscrivant dans un environnement matériel,
+                                temporel et spatial commun, fournissent un terreau singulièrement fertile à des
+                                poursuites concomitantes</p>
+                            <a class="juridique-article__text__link cta cta--orange" href="">Découvrir l'article</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="club">
+            <div class="container">
+                <div class="club-top">
+                    <h2 class="club__title">Le club des juristes</h2>
+                    <aside class="club__sticker">
+                        <p class="club__sticker__paragraph">Créé en 2007, le Club des juristes est <b>le premier think
+                                tank
+                                juridique français</b>. Il s’agit d’un lieu indépendant de réflexion sur la place du
+                            droit en
+                            France. <b>Le « Club » a pour objectif de nourrir le débat public</b> en formulant des
+                            propositions
+                            concrètes dans le domaine du droit et de la justice. C’est notamment le travail des
+                            commissions – justice, fiscalité, environnement, constitutions et institutions, Europe, et
+                            commissions dites « ad hoc » – qu’il réunit en son sein et qui aboutissent à des
+                            recommandations innovantes, utiles aux décideurs publics. Pour ce faire, <b>le Club des
+                                juristes réunit des professionnels du droit reconnus issus d’horizons divers : avocats,
+                                magistrats, notaires, universitaires, représentants d’entreprises, etc.</b></p>
+                        <a class="club__sticker__link cta cta--white" href="">En savoir plus</a>
+                    </aside>
+                </div>
+                <span class="club-bottom"></span>
+            </div>
+        </section>
+        <section class="partners container">
+            <h2 class="partners__title">Nos partenaires</h2>
+            <div class="partners__grid">
+                <div class="partner">
+                    <picture>
+                        <img src="./src/assets/img/partner-logo-1.png" alt="Accorhotels">
+                    </picture>
+                </div>
+                <div class="partner">
+                    <picture>
+                        <img src="./src/assets/img/partner-logo-2.png" alt="Air France KLM">
+                    </picture>
+                </div>
+                <div class="partner">
+                    <picture>
+                        <img src="./src/assets/img/partner-logo-3.png" alt="France tv">
+                    </picture>
+                </div>
+                <div class="partner">
+                    <picture>
+                        <img src="./src/assets/img/partner-logo-4.png" alt="Carrefour">
+                    </picture>
+                </div>
+                <div class="partner">
+                    <picture>
+                        <img src="./src/assets/img/partner-logo-5.png" alt="EDF">
+                    </picture>
+                </div>
+                <div class="partner">
+                    <picture>
+                        <img src="./src/assets/img/partner-logo-6.png" alt="L'Oréal">
+                    </picture>
+                </div>
+            </div>
+            <div class="partners__link cta-container cta-container--center">
+                <a class="cta cta--beige" href="">Voir tous les partenaires</a>
+            </div>
+        </section>
+        <section class="club-videos">
+            <div class="container">
+                <h2>Dernières vidéos du club</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <article class="club-video swiper-slide">
+                            <picture class="club-video__thumbnail video-thumbnail">
+                                <div class="club-video__thumbnail__icon video-thumbnail__icon">
+                                    <img class="club-video__thumbnail__icon__play video-thumbnail__icon__play"
+                                        src="./src/assets/img/video-icon-play.svg">
+                                    <img class="club-video__thumbnail__icon__circle video-thumbnail__icon__circle"
+                                        src="./src/assets/img/video-icon-circle.svg">
+                                </div>
+                                <img class="club-video__thumbnail__image video-thumbnail__image"
+                                    src="./src/assets/img/club-video-1.jpg"
+                                    alt="Mur blanc ensoleillé avec inscrit Défense d'afficher">
+                            </picture>
+                            <div class="club-video__text">
+                                <span class="club-video__text__date">10 août 2021</span>
+                                <h4 class="club-video__text__title">Défense d’afficher – La ville de Paris contre l’affichage sauvage</h4>
+                            </div>
+                        </article>
+                        <article class="club-video swiper-slide">
+                            <picture class="club-video__thumbnail video-thumbnail">
+                                <div class="club-video__thumbnail__icon video-thumbnail__icon">
+                                    <img class="club-video__thumbnail__icon__play video-thumbnail__icon__play"
+                                        src="./src/assets/img/video-icon-play.svg">
+                                    <img class="club-video__thumbnail__icon__circle video-thumbnail__icon__circle"
+                                        src="./src/assets/img/video-icon-circle.svg">
+                                </div>
+                                <img class="club-video__thumbnail__image video-thumbnail__image"
+                                    src="./src/assets/img/club-video-2.jpg"
+                                    alt="Bibliothèque étroite remplie de livres">
+                            </picture>
+                            <div class="club-video__text">
+                                <span class="club-video__text__date">10 août 2021</span>
+                                <h4 class="club-video__text__title">Réforme législative du droit d’accès aux archives « secret-défense » : l’apport de la loi « PTAR » du 30 juillet 2021</h4>
+                            </div>
+                        </article>
+                        <article class="club-video swiper-slide">
+                            <picture class="club-video__thumbnail video-thumbnail">
+                                <div class="club-video__thumbnail__icon video-thumbnail__icon">
+                                    <img class="club-video__thumbnail__icon__play video-thumbnail__icon__play"
+                                        src="./src/assets/img/video-icon-play.svg">
+                                    <img class="club-video__thumbnail__icon__circle video-thumbnail__icon__circle"
+                                        src="./src/assets/img/video-icon-circle.svg">
+                                </div>
+                                <img class="club-video__thumbnail__image video-thumbnail__image"
+                                    src="./src/assets/img/club-video-3.jpg"
+                                    alt="Tracteur rouge labourant le champ">
+                            </picture>
+                            <div class="club-video__text">
+                                <span class="club-video__text__date">10 août 2021</span>
+                                <h4 class="club-video__text__title">La loi Egalim n’a pas résolu les relations entre les agriculteurs et la grande distribution</h4>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="club-videos__prev swiper-button-prev"></button>
+                <button class="club-videos__next swiper-button-next"></button>
+            </div>
+        </section>
+        <section class="contact container">
+            <div class="width-limiter--medium">
+                <h2>Nous contacter</h2>
+                <p class="contact__advice">Afin de traiter votre demande dans les plus brefs délais, nous vous invitons à utiliser le formulaire ci-dessous.</p>
+                <p class="contact__warning">Attention : Le Club des juristes n’est pas un cabinet d’avocats, il n’est pas en mesure de répondre aux questions portant sur des situations personnelles. Nous vous invitons pour cela à vous adresser directement aux professionnels concernés. Merci pour votre compréhension.</p>
+                <form class="contact__form" action="send_mail.php" method="POST">
+                    <div class="contact__form__field-container  --mandatory">
+                        <label for="lastname" class="h3">Nom</label>
+                        <input name="lastname" type="text" id="lastname" placeholder="Votre nom">
+                    </div>
+                    <div class="contact__form__field-container --mandatory">
+                        <label for="firstname" class="h3">Prénom</label>
+                        <input name="firstname" type="text" id="firstname" placeholder="Votre prénom">
+                    </div>
+                    <div class="contact__form__field-container --mandatory">
+                        <label for="email" class="h3">Email</label>
+                        <input name="email" type="email" id="email" placeholder="Votre email">
+                    </div>
+                    <div class="contact__form__field-container --mandatory">
+                        <label for="recipient" class="h3">Destinataire de ce message</label>
+                        <select name="recipient" id="recipient">
+                            <option value="" selected disabled hidden>Séléctionner un destinataire</option>
+                            <option value="Elisabeth Baraduc">Elisabeth Baraduc</option>
+                            <option value="Christine Lagarde">Christine Lagarde</option>
+                            <option value="Alexandre de Juniac">Alexandre de Juniac</option>
+                        </select>
+                    </div>
+                    <div class="contact__form__field-container --large --mandatory">
+                        <label for="message" class="h3">Message</label>
+                        <textarea name="message" id="message" placeholder="Votre message" rows="4"></textarea>
+                    </div>
+                </form>
+                <div class="contact__form__submit-container cta-container cta-container--left">
+                    <button class="contact__form__submit-container__button cta cta--orange">Envoyer</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="primary-footer">
+        <div class="container">
+            <nav class="primary-footer__nav">
+                <a href="" class="primary-footer__nav__logo-container">
+                    <img src="./src/assets/img/logo.svg" alt="Logo Les avocats de France">
+                </a>
+                <ul role="list" class="primary-footer__nav__menu">
+                    <li><a href="">Toute l'actu</a></li>
+                    <li><a href="">Le club</a></li>
+                    <li><a href="">Publication</a></li>
+                    <li><a href="">Nos partenaires</a></li>
+                    <li><a href="">Évènements</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="./src/js/videoCarousel.js" defer></script>
+    <script src="./src/js/contactForm.js" defer></script>
+</body>
+
+</html>

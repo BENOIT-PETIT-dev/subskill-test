@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.club-video {
+  &:hover {
+    .club-video__text__title {
+      text-decoration: underline;
+    }
+  }
+
+  &__thumbnail {
+    height: 15rem;
+
+    @include mq(small) {
+      height: 12rem;
+    }
+  }
+
+  &__text {
+    &__date {
+      display: block;
+      margin-top: 0.9375rem;
+      font-weight: 700;
+      line-height: 21px;
+      letter-spacing: 1px;
+    }
+
+    &__title {
+      margin-top: 0.625rem;
+      padding-right: 14%;
+      cursor: pointer;
+    }
+  }
+}

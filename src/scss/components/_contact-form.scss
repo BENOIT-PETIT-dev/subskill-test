@@ -1,0 +1,117 @@
+@use '../abstracts' as *;
+
+.contact__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "lastname firstname"
+    "email recipient"
+    "message message";
+  row-gap: 1.875rem;
+  align-items: end;
+  column-gap: 3.75rem;
+
+  @include mq(small) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__field-container {
+    width: 100%;
+    max-width: 25.625rem;
+
+    @include mq(small) {
+      max-width: none;
+    }
+
+    &:nth-child(1) {
+      grid-area: lastname;
+      justify-self: start;
+    }
+
+    &:nth-child(2) {
+      grid-area: firstname;
+      justify-self: end;
+    }
+    
+    &:nth-child(3) {
+      grid-area: email;
+      justify-self: start;
+    }
+
+    &:nth-child(4) {
+      grid-area: recipient;
+      justify-self: end;
+    }
+
+    &:nth-child(5) {
+      grid-area: message;
+      justify-self: start;
+    }
+
+    &.--large {
+      max-width: 100%;
+    }
+
+    &.--mandatory {
+      label {
+        position: relative;
+        padding-right: 1.5ch;
+
+        &::after {
+          content: "*";
+          position: absolute;
+          right: 0;
+          top: 40%;
+          transform: translate(0, -50%);
+          color: var(--color-layout-orange);
+          font-family: 'Seshat', sans-serif;
+          font-weight: 400;
+          font-size: var(--font-30);
+          line-height: 2.25rem;
+        }
+      }
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid var(--color-ui-inputborder);
+      outline: none;
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 0.6875rem;
+
+      @include mq(xsmall) {
+        font-size: var(--font-25);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    textarea,
+    input {
+      line-height: 1.3125rem;
+      padding: 0.225rem 0;
+
+      &::placeholder {
+        color: var(--color-font-gray);
+      }
+    }
+
+    option {
+      padding: 1rem 0;
+      height: 5rem;
+    }
+  }
+
+  &__submit-container {
+    margin-top: 3.125rem;
+  }
+}

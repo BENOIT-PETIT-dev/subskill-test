@@ -1,0 +1,20 @@
+{
+  "name": "subskill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "parcel-bundler": "^1.12.5",
+    "swiper": "^6.8.4"
+  },
+  "devDependencies": {
+    "sass": "^1.38.0"
+  }
+}

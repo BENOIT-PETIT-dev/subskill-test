@@ -1,0 +1,16 @@
+$sizes: (
+  xsmall: 30rem,
+  small: 40rem,
+  medium: 62rem,
+  large: 87.5rem,
+);
+
+.width-limiter {
+  width: 100%;
+
+  @each $prop, $value in $sizes {
+    &--#{$prop} {
+      max-width: #{$value};
+    };
+  }
+}

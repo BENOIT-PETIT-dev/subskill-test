@@ -1,0 +1,10 @@
+.tag {
+  display: table;
+  padding: 0.4375rem 1.125rem;
+  background-color: var(--color-layout-gray);
+
+  span {
+    font-size: var(--font-14);
+    font-weight: 700;
+  }
+}

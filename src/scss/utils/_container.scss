@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+.container {
+  box-sizing: content-box;
+  padding: 0 1.5rem;
+  max-width: 69.375rem;
+  margin: 0 auto;
+
+  @include mq(xsmall) {
+    padding: 0 1rem;
+  }
+}
